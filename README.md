@@ -17,3 +17,7 @@ A simple desktop application developed in **C++** using **Qt Creator** and **SFM
   - Shuffle
   - Loop
   - Queue Songs
+
+## Releases
+
+A fully built application is available for download under theReleases section of this repository.
