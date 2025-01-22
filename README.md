@@ -1,10 +1,6 @@
-# Music Player
-
-A simple music player that currently supports only .mp3 files
-
 ## Description
 
-This **Music Player** is a desktop application developed in **C++** using the **Qt Creator IDE** and the **SFML** library. It allows users to manage and play their music collection effortlessly.
+A simple desktop application developed in **C++** using **Qt Creator** and **SFML** library, that currently supports only .mp3 files.
 
 ## Features
 
