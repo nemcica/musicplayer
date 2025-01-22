@@ -13,15 +13,6 @@ bool FileLoader::isMusicFile(const wstring &fileName) {
     return false;
 }
 
-bool FileLoader::isValidFile(const wstring &filePath) {
-    sf::Music music;
-
-    if(!music.openFromFile(string(filePath.begin(), filePath.end()))) {
-        return false;
-    }
-    return true;
-}
-
 void FileLoader::findMusicFiles(const wstring &directory, vector<song> &songs) {
     WIN32_FIND_DATA findFileData;
     HANDLE hFind;
@@ -45,20 +36,18 @@ void FileLoader::findMusicFiles(const wstring &directory, vector<song> &songs) {
             if (isMusicFile(fileName)) {
                 wstring filePath = directory + L"\\" + fileName;
 
-                if (isValidFile(filePath)) {
-                    wstring delimiter = L" - ";
-                    size_t pos = fileName.find(delimiter);
-                    wstring artist;
-                    wstring songname;
-                    if (pos != std::wstring::npos) {
-                        artist = fileName.substr(0, pos);
-                        songname = fileName.substr(pos + 3);
-                    } else {
-                        artist = L"";
-                        songname = fileName;
-                    }
-                    songs.push_back(song(artist, songname, filePath));
+                wstring delimiter = L" - ";
+                size_t pos = fileName.find(delimiter);
+                wstring artist;
+                wstring songname;
+                if (pos != std::wstring::npos) {
+                    artist = fileName.substr(0, pos);
+                    songname = fileName.substr(pos + 3);
+                } else {
+                    artist = L"";
+                    songname = fileName;
                 }
+                songs.push_back(song(artist, songname, filePath));
             }
         }
     } while (FindNextFile(hFind, &findFileData) != 0);

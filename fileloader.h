@@ -14,7 +14,6 @@ private:
     vector<song> songs;
 
     bool isMusicFile(const wstring &fileName);
-    bool isValidFile(const wstring &filePath);
     void findMusicFiles(const wstring &directory, vector<song> &songs);
 
 public:

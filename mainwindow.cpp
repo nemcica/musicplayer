@@ -66,7 +66,14 @@ void MainWindow::oncellclicked(int row, int col) {
         wstring path = qpath.toStdWString();
         current_row = row;
 
-        audioplayer.loadFile(path);
+        try {
+            audioplayer.loadFile(path);
+        } catch (const std::runtime_error &e) {
+            ui->currentsong->clear();
+            ui->currentsong->append(e.what());
+            return;
+        }
+
 
         ui->currentsong->clear();
         ui->currentsong->append(ui->artistsongdisplay->item(row, 0)->text() + " - " + ui->artistsongdisplay->item(row, 1)->text());

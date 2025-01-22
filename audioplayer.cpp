@@ -6,7 +6,7 @@ AudioPlayer::AudioPlayer() {
 void AudioPlayer::loadFile(wstring file_name) {
 
     if (!music.openFromFile(file_name)) {
-        throw -1; // Exit if there's an error
+        throw std::runtime_error("Failed to load music"); // Exit if there's an error
     }
 
 
