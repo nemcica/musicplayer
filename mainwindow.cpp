@@ -130,7 +130,13 @@ void MainWindow::updateDurationLabel() {
         QString qpath = ui->artistsongdisplay->item(current_row, 2)->text();
         wstring path = qpath.toStdWString();
 
-        audioplayer.loadFile(path);
+        try {
+            audioplayer.loadFile(path);
+        } catch (const std::runtime_error &e) {
+            ui->currentsong->clear();
+            ui->currentsong->append(e.what());
+            return;
+        }
 
         ui->currentsong->clear();
         ui->currentsong->append(ui->artistsongdisplay->item(current_row, 0)->text() + " - " + ui->artistsongdisplay->item(current_row, 1)->text());

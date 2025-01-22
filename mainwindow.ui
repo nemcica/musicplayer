@@ -77,8 +77,8 @@
    <widget class="QTableWidget" name="artistsongdisplay">
     <property name="geometry">
      <rect>
-      <x>20</x>
-      <y>110</y>
+      <x>30</x>
+      <y>100</y>
       <width>521</width>
       <height>441</height>
      </rect>
@@ -202,7 +202,7 @@
       <x>570</x>
       <y>10</y>
       <width>191</width>
-      <height>541</height>
+      <height>531</height>
      </rect>
     </property>
    </widget>
