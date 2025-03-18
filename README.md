@@ -1,6 +1,6 @@
 # Music Player
 
-![Alt text]([URL_to_your_image](https://github.com/nemcica/Chess/blob/main/chess.png?raw=true))
+![Alt text](https://github.com/nemcica/musicplayer/blob/main/musicplayer.png?raw=true)
 
 ## Description
 
