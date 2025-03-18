@@ -1,10 +1,10 @@
 # Music Player
 
-![Alt text](https://github.com/nemcica/musicplayer/blob/main/musicplayer.png?raw=true)
-
 ## Description
 
 A simple desktop application developed in **C++** using **Qt Creator** and **SFML** library, that currently supports only .mp3 files.
+
+![Alt text](https://github.com/nemcica/musicplayer/blob/main/musicplayer.png?raw=true)
 
 ## Features
 
