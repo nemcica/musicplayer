@@ -1,6 +1,6 @@
 # Music Player
 
-![Alt text](![image](https://github.com/user-attachments/assets/32f871de-fcd1-42aa-ba92-b2f3235cfe6a))
+![Alt text]([URL_to_your_image](https://github.com/nemcica/Chess/blob/main/chess.png?raw=true))
 
 ## Description
 
